@@ -1,8 +1,13 @@
 package com.example.demo;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
+@Scope
 public class Dog implements Pet {
     private String name;
 
@@ -22,13 +27,14 @@ public class Dog implements Pet {
         System.out.println("Гав гав");
     }
 
-    public void init(){
-        System.out.println("Class dog: init method");
-
-    }
-
-    public void destroy(){
-        System.out.println("Class dog : destroy method");
-    }
+//    @PostConstruct
+//    public void init(){
+//        System.out.println("Class dog: init method");
+//
+//    }
+//    @PreDestroy
+//    public void destroy(){
+//        System.out.println("Class dog : destroy method");
+//    }
 
 }
