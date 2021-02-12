@@ -10,9 +10,9 @@ public class Person {
 //    @Autowired
 //    @Qualifier("catBean")
     private Pet pet;
-//    @Value("${person.surname}")
+    @Value("${person.surname}")
     private String surname;
-//    @Value("${person.age}")
+    @Value("${person.age}")
     private String age;
 //
 //@Autowired
@@ -20,8 +20,9 @@ public class Person {
 //    System.out.println("Person bean is created");
 //    this.pet = pet;
 //}
-    public Person() {
+    public Person(Pet pet ) {
         System.out.println("Person bean is created");
+        this.pet = pet;
     }
     public String getAge() {
         System.out.println("Getting age");
@@ -32,8 +33,8 @@ public class Person {
         System.out.println("Getting surname");
         return surname;
     }
-    @Autowired
-    @Qualifier("dog")
+//    @Autowired
+//    @Qualifier("dog")
     public void setPet(Pet pet) {
         System.out.println("Class Person: set pet");
         this.pet = pet;
