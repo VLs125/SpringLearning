@@ -7,9 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class LoggingAspect {
-    @Before("execution(public void getBook())")
+    @Before("execution(public void get*())")
     public void beforeGetBookAdvice(){
         System.out.println("some Aspects before get book");
+    }
+
+    @Before("execution(public private * return*())")
+    public void beforeReturnBookAdvice(){
+        System.out.println("some Aspects before return book");
     }
 
 
