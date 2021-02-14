@@ -13,12 +13,12 @@ public class Test2 {
 
         university.addStudents();
 
-        try {
+//        try {
             List<Student> students = university.getStudents();
             System.out.println(students);
-        }catch (Exception e){
-            System.out.println("Отловили исключение = "+ e);
-        }
+//        }catch (Exception e){
+//            System.out.println("Отловили исключение = "+ e);
+//        }
 
         context.close();
     }
