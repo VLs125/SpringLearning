@@ -42,6 +42,7 @@ public class Test1 {
             Employee emp = session.get(Employee.class,3);
 
             System.out.println(emp);
+            System.out.println();
 
 
 
