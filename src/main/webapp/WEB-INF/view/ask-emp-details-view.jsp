@@ -1,3 +1,4 @@
+<%@ taglib prefix="fomm" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -13,6 +14,7 @@
         placeholder="Write your name"/>
         <input type="submit">
     </form>
+
 </div>
 </body>
 </html>
